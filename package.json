@@ -1,9 +1,9 @@
 {
   "name": "galexia-eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": ".eslintrc",
   "packageManager": "yarn@3.6.3",
-  "devDependencies": {
+  "dependencies": {
     "@babel/eslint-parser": "^7.22.11",
     "@nuxtjs/eslint-config": "^6.0.1",
     "eslint": "^7.29.0",
