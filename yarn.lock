@@ -71,7 +71,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:^7.12.16, @babel/eslint-parser@npm:^7.22.11":
+"@babel/eslint-parser@npm:^7.12.16":
   version: 7.22.11
   resolution: "@babel/eslint-parser@npm:7.22.11"
   dependencies:
@@ -82,6 +82,20 @@ __metadata:
     "@babel/core": ^7.11.0
     eslint: ^7.5.0 || ^8.0.0
   checksum: a7d4406ac021a192c8e2d2dd5a9ebe6352dc4c0c842c0971080e5ac1bcb81eb6dceb72899ec611b82ab4356c658649a0a4f85815f6245ab1674cd329dde06369
+  languageName: node
+  linkType: hard
+
+"@babel/eslint-parser@npm:^7.22.15":
+  version: 7.23.3
+  resolution: "@babel/eslint-parser@npm:7.23.3"
+  dependencies:
+    "@nicolo-ribaudo/eslint-scope-5-internals": 5.1.1-v1
+    eslint-visitor-keys: ^2.1.0
+    semver: ^6.3.1
+  peerDependencies:
+    "@babel/core": ^7.11.0
+    eslint: ^7.5.0 || ^8.0.0
+  checksum: 9573daebe21af5123c302c307be80cacf1c2bf236a9497068a14726d3944ef55e1282519d0ccf51882dfc369359a3442299c98cb22a419e209924db39d4030fd
   languageName: node
   linkType: hard
 
@@ -1109,6 +1123,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-config-galexia@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "eslint-config-galexia@workspace:."
+  dependencies:
+    "@babel/eslint-parser": ^7.22.15
+    "@nuxtjs/eslint-config": ^6.0.1
+    eslint: ^7.29.0
+    eslint-plugin-nuxt: ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "eslint-config-standard@npm:^16.0.3":
   version: 16.0.3
   resolution: "eslint-config-standard@npm:16.0.3"
@@ -1642,17 +1667,6 @@ __metadata:
   checksum: c3f1f5ba20f4e962efb71344ce0a40722163e85bee2101ce25f88214e78182d2d2476aa85ef37950c579eb6cf6ee811c17b3101bb84004bb75655f3e33f3fdb5
   languageName: node
   linkType: hard
-
-"galexia-eslint-config@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "galexia-eslint-config@workspace:."
-  dependencies:
-    "@babel/eslint-parser": ^7.22.11
-    "@nuxtjs/eslint-config": ^6.0.1
-    eslint: ^7.29.0
-    eslint-plugin-nuxt: ^4.0.0
-  languageName: unknown
-  linkType: soft
 
 "gensync@npm:^1.0.0-beta.2":
   version: 1.0.0-beta.2
@@ -2621,7 +2635,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.4#~builtin<compat/resolve>":
   version: 1.22.4
-  resolution: "resolve@patch:resolve@npm%3A1.22.4#~builtin<compat/resolve>::version=1.22.4&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.4#~builtin<compat/resolve>::version=1.22.4&hash=07638b"
   dependencies:
     is-core-module: ^2.13.0
     path-parse: ^1.0.7
