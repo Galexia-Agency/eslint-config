@@ -14,9 +14,11 @@ module.exports = {
     ecmaVersion: 8,
     sourceType: 'module'
   },
-  // add your custom rules here
   rules: {
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+    'prefer-template': 'error',
+    'vue/prefer-template': 'error',
+    'vue/custom-event-name-casing': ['error', 'kebab-case'],
     'vue/comment-directive': 0,
     'vue/no-v-html': 0,
     'vue/component-tags-order': [

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-galexia",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": ".eslintrc.js",
   "packageManager": "yarn@3.6.3",
   "dependencies": {
