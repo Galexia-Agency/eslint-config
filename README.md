@@ -1,4 +1,5 @@
 # Eslint Config
+
 A base eslint config for use across Galexia's projects
 
 ## Install
@@ -8,6 +9,7 @@ yarn add eslint eslint-config-galexia@https://github.com/Galexia-Agency/eslint-c
 ```
 
 .eslintrc
+
 ```json
 {
   "extends": [
@@ -17,7 +19,9 @@ yarn add eslint eslint-config-galexia@https://github.com/Galexia-Agency/eslint-c
 ```
 
 ### Scripts
+
 package.json
+
 ```json
 "scripts": {
     "lint:scripts": "eslint --ext .js,.vue --ignore-path .gitignore .",
@@ -26,11 +30,13 @@ package.json
 ```
 
 ### Configuring with Nuxt 2
+
 ```bash
-yarn add @nuxtjs/eslint-module --dev
+yarn add @nuxtjs/eslint-module eslint --dev
 ```
 
 nuxt.config.js
+
 ```js
 ...
 modules: [
@@ -40,6 +46,7 @@ modules: [
 ```
 
 .eslintrc
+
 ```json
 {
   "env": {
@@ -52,11 +59,13 @@ modules: [
 ```
 
 ### Configuring with Nuxt 3
+
 ```bash
-yarn add @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript @typescript-eslint/parser --dev
+yarn add @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript @typescript-eslint/parser eslint --dev
 ```
 
 nuxt.config.ts
+
 ```ts
 ...
 modules: [
@@ -66,6 +75,7 @@ modules: [
 ```
 
 .eslintrc
+
 ```json
 {
   "env": {
