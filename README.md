@@ -90,3 +90,17 @@ modules: [
   }
 }
 ```
+
+### Configuring with VSCode
+
+1. Install [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+2. Add `vue` to `Probe` plugin settings.
+3. Add the following to `.vscode/settings.json`
+
+  ```json
+  {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  }
+  ```
