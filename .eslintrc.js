@@ -37,6 +37,7 @@ module.exports = {
       'error',
       'never'
     ],
-    'import/no-named-as-default': 'off'
+    'import/no-named-as-default': 'off',
+    'vue/multi-word-component-names': 0
   }
 }
