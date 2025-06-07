@@ -1,6 +1,4 @@
-import eslintPluginVue from 'eslint-plugin-vue'
-import nuxtPlugin from 'eslint-plugin-nuxt'
-import babelParser from '@babel/eslint-parser'
+import typescriptParser from '@typescript-eslint/parser'
 
 export default [
   {
@@ -12,14 +10,7 @@ export default [
         window: 'readonly',
         document: 'readonly'
       },
-      parser: babelParser,
-      parserOptions: {
-        requireConfigFile: false
-      }
-    },
-    plugins: {
-      vue: eslintPluginVue,
-      nuxt: nuxtPlugin
+      parser: typescriptParser
     },
     rules: {
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
@@ -33,7 +24,8 @@ export default [
       'arrow-parens': ['error', 'always'],
       semi: ['error', 'never'],
       'import/no-named-as-default': 'off',
-      'vue/multi-word-component-names': 'off'
+      'vue/multi-word-component-names': 'off',
+      'vue/no-v-html': 'off'
     }
   }
 ]

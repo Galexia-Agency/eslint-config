@@ -22,15 +22,26 @@ package.json
 
 ```json
 "scripts": {
-    "lint:scripts": "eslint --ext .js,.vue .",
-    "fix:scripts": "eslint --ext .js,.vue . --fix"
+    "lint:scripts": "eslint .",
+    "fix:scripts": "eslint . --fix"
 }
+```
+
+### Configuration
+
+.eslint.config.js
+
+```js
+import galexiaConfig from '@galexia-agency/eslint-config-galexia'
+
+export default galexiaConfig
+
 ```
 
 ### Configuring with Nuxt 3
 
 ```bash
-pnpm install @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript @typescript-eslint/parser eslint --save-dev
+pnpm install @nuxt/eslint-plugin --save-dev
 ```
 
 nuxt.config.ts
@@ -38,26 +49,9 @@ nuxt.config.ts
 ```ts
 ...
 modules: [
-  '@nuxtjs/eslint-module',
+  '@nuxt/eslint-plugin',
 ]
 ...
-```
-
-.eslintrc
-
-```json
-{
-  "env": {
-    "node": true
-  },
-  "extends": [
-    "@galexia-agency/eslint-config-galexia",
-    "@nuxtjs/eslint-config-typescript"
-  ],
-  "parserOptions": {
-    "parser": "@typescript-eslint/parser"
-  }
-}
 ```
 
 ### Configuring with VSCode

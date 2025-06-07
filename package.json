@@ -3,15 +3,15 @@
   "version": "3.1.0",
   "main": "eslint.config.js",
   "dependencies": {
-    "@babel/eslint-parser": "^7.27.5",
-    "@nuxtjs/eslint-config": "^12.1.0",
-    "eslint-plugin-nuxt": "^4.0.0"
+    "@nuxt/eslint-config": "^1.4.1",
+    "@typescript-eslint/parser": "^8.33.1"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0"
+    "eslint": "^9.28.0"
   },
   "repository": "https://github.com/Galexia-Agency/eslint-config",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  }
+  },
+  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
 }
