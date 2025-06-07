@@ -1,35 +1,56 @@
-import typescriptParser from '@typescript-eslint/parser'
-import vue from 'eslint-plugin-vue'
+import parser from '@typescript-eslint/parser'
+import { createConfigForNuxt } from '@nuxt/eslint-config'
 
-export default [
-  {
-    files: ['**/*.{js,ts,vue}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly'
-      },
-      parser: typescriptParser
-    },
-    plugins: {
-      vue
-    },
+const config = await createConfigForNuxt()
+  .override('nuxt/vue/rules', {
     rules: {
-      'vue/component-name-in-template-casing': ['error', 'PascalCase'],
-      'prefer-template': 'error',
       'vue/prefer-template': 'error',
-      'vue/custom-event-name-casing': ['error', 'kebab-case'],
       'vue/comment-directive': 'off',
-      'vue/no-v-html': 'off',
-      'vue/component-tags-order': ['error', { order: ['style', 'template', 'script'] }],
-      quotes: ['error', 'single'],
-      'arrow-parens': ['error', 'always'],
-      semi: ['error', 'never'],
-      'import/no-named-as-default': 'off',
+      'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+      'vue/custom-event-name-casing': ['error', 'kebab-case'],
       'vue/multi-word-component-names': 'off',
-      'vue/no-v-html': 'off'
+      'vue/no-v-html': 'off',
+      'vue/block-order': ['error', {
+        order: ['style', 'template', 'script']
+      }],
     }
-  }
-]
+  })
+  .override('nuxt/javascript', {
+    rules: {
+      'no-console': 'error',
+      'camelcase': ['error', { properties: 'always' }],
+      'prefer-template': 'error',
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never'],
+      'import/no-named-as-default': 'off',
+    }
+  })
+  .append(
+    {
+      ignores: ['eslint.config.js'],
+      files: ['**/*.{js,ts}'],
+      languageOptions: {
+        parser,
+        parserOptions: {
+          sourceType: 'module'
+        }
+      },
+      rules: {
+        '@typescript-eslint/naming-convention': [
+          'error',
+          // Class, interface, type alias, enum, etc.
+          {
+            selector: 'typeLike',
+            format: ['PascalCase']
+          },
+          // Type/interface/class properties
+          {
+            selector: 'typeProperty',
+            format: ['camelCase']
+          }
+        ]
+      }
+    }
+  )
+
+export default config
