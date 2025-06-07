@@ -7,10 +7,8 @@ A base eslint config for use across Galexia's projects
 Create a `.npmrc` file in your project and add the registry for the `@galexia-agency` scope:
 
 ```bash
-echo @galexia-agency:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken= >> .npmrc
+echo @galexia-agency:registry=https://npm.pkg.github.com >> .npmrc
 ```
-
-Add your GitHub Access Token to ensure you can download packages.
 
 Then install the package from GitHub Packages:
 
