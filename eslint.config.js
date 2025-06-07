@@ -1,4 +1,5 @@
 import typescriptParser from '@typescript-eslint/parser'
+import vue from 'eslint-plugin-vue'
 
 export default [
   {
@@ -11,6 +12,9 @@ export default [
         document: 'readonly'
       },
       parser: typescriptParser
+    },
+    plugins: {
+      vue
     },
     rules: {
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
