@@ -13,7 +13,7 @@ echo "@galexia-agency:registry=https://npm.pkg.github.com" >> .npmrc
 Then install the package from GitHub Packages:
 
 ```bash
-npm install eslint @galexia-agency/eslint-config-galexia --save-dev
+pnpm install eslint @galexia-agency/eslint-config-galexia --save-dev
 ```
 
 .eslintrc
@@ -40,7 +40,7 @@ package.json
 ### Configuring with Nuxt 2
 
 ```bash
-yarn add @nuxtjs/eslint-module eslint --dev
+pnpm install @nuxtjs/eslint-module eslint --save-dev
 ```
 
 nuxt.config.js
@@ -69,7 +69,7 @@ modules: [
 ### Configuring with Nuxt 3
 
 ```bash
-yarn add @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript @typescript-eslint/parser eslint --dev
+pnpm install @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript @typescript-eslint/parser eslint --save-dev
 ```
 
 nuxt.config.ts
@@ -77,7 +77,7 @@ nuxt.config.ts
 ```ts
 ...
 modules: [
-    '@nuxtjs/eslint-module',
+  '@nuxtjs/eslint-module',
 ]
 ...
 ```
