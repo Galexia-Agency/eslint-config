@@ -16,18 +16,6 @@ Then install the package from GitHub Packages:
 npm install eslint @galexia-agency/eslint-config-galexia --save-dev
 ```
 
-## Publishing your package
-
-Add the GitHub registry to your `package.json` so that `npm publish` uses GitHub Packages:
-
-```json
-"publishConfig": {
-  "registry": "https://npm.pkg.github.com/"
-}
-```
-
-Ensure that the `.npmrc` file includes the scope registry as shown above.
-
 .eslintrc
 
 ```json
