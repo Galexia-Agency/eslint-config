@@ -40,16 +40,14 @@ export default galexiaConfig
 
 ### Configuring with Nuxt 3
 
-```bash
-pnpm install @nuxt/eslint-plugin --save-dev
-```
-
 nuxt.config.ts
 
 ```ts
 ...
+import eslint from '@nuxt/eslint-plugin'
+
 modules: [
-  '@nuxt/eslint-plugin',
+  eslint,
 ]
 ...
 ```

@@ -1,7 +1,7 @@
 import parser from '@typescript-eslint/parser'
 import { createConfigForNuxt } from '@nuxt/eslint-config'
 
-const config = await createConfigForNuxt()
+export default await createConfigForNuxt()
   .override('nuxt/vue/rules', {
     rules: {
       'vue/prefer-template': 'error',
@@ -52,5 +52,3 @@ const config = await createConfigForNuxt()
       }
     }
   )
-
-export default config
