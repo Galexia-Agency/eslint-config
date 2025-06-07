@@ -4,9 +4,29 @@ A base eslint config for use across Galexia's projects
 
 ## Install
 
+Create a `.npmrc` file in your project and add the registry for the `@galexia-agency` scope:
+
 ```bash
-yarn add eslint eslint-config-galexia@https://github.com/Galexia-Agency/eslint-config --dev
+echo "@galexia-agency:registry=https://npm.pkg.github.com" >> .npmrc
 ```
+
+Then install the package from GitHub Packages:
+
+```bash
+npm install eslint @galexia-agency/eslint-config-galexia --save-dev
+```
+
+## Publishing your package
+
+Add the GitHub registry to your `package.json` so that `npm publish` uses GitHub Packages:
+
+```json
+"publishConfig": {
+  "registry": "https://npm.pkg.github.com/"
+}
+```
+
+Ensure that the `.npmrc` file includes the scope registry as shown above.
 
 .eslintrc
 
