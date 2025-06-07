@@ -5,7 +5,7 @@ A base eslint config for use across Galexia's projects
 ## Install
 
 ```bash
-yarn add eslint eslint-config-galexia@https://github.com/Galexia-Agency/eslint-config --dev
+yarn add eslint@^9 eslint-config-galexia@https://github.com/Galexia-Agency/eslint-config --dev
 ```
 
 .eslintrc
@@ -32,7 +32,7 @@ package.json
 ### Configuring with Nuxt 2
 
 ```bash
-yarn add @nuxtjs/eslint-module eslint --dev
+yarn add @nuxtjs/eslint-module eslint@^9 --dev
 ```
 
 nuxt.config.js
@@ -61,7 +61,7 @@ modules: [
 ### Configuring with Nuxt 3
 
 ```bash
-yarn add @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript @typescript-eslint/parser eslint --dev
+yarn add @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript @typescript-eslint/parser eslint@^9 --dev
 ```
 
 nuxt.config.ts
