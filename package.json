@@ -1,7 +1,7 @@
 {
   "name": "@galexia-agency/eslint-config-galexia",
   "version": "3.1.0",
-  "main": ".eslintrc.js",
+  "main": "eslint.config.js",
   "dependencies": {
     "@babel/eslint-parser": "^7.27.5",
     "@nuxtjs/eslint-config": "^12.1.0",
