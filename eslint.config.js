@@ -1,5 +1,6 @@
 import parser from '@typescript-eslint/parser'
 import { createConfigForNuxt } from '@nuxt/eslint-config'
+import stylistic from '@stylistic/eslint-plugin'
 
 export default await createConfigForNuxt()
   .override('nuxt/vue/rules', {
@@ -27,13 +28,15 @@ export default await createConfigForNuxt()
   })
   .append(
     {
-      ignores: ['eslint.config.js'],
       files: ['**/*.{js,ts}'],
       languageOptions: {
         parser,
         parserOptions: {
           sourceType: 'module'
         }
+      },
+      plugins: {
+        '@stylistic/js': stylistic
       },
       rules: {
         '@typescript-eslint/naming-convention': [
@@ -48,7 +51,8 @@ export default await createConfigForNuxt()
             selector: 'typeProperty',
             format: ['camelCase']
           }
-        ]
+        ],
+        '@stylistic/js/quote-props': ['error', 'as-needed']
       }
     }
   )
