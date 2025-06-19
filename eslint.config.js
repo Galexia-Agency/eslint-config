@@ -52,7 +52,11 @@ export default await createConfigForNuxt()
             format: ['camelCase']
           }
         ],
-        '@stylistic/js/quote-props': ['error', 'as-needed']
+        '@stylistic/js/quote-props': ['error', 'as-needed'],
+        'padding-line-between-statements': [
+          'error',
+          { blankLine: 'always', prev: '*', next: 'return' }
+        ]
       }
     }
   )
